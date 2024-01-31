@@ -1,0 +1,42 @@
+<div class="country-full">
+    <img class="flag" src="{{ country[0].flags.png }}" alt="">
+    <div class="right-wrapper">
+        <h1 class="country-full__head"> {{ country[0].name.official }} </h1>
+        <div class="flex_wrapper">
+            <div>
+                <p class="country-full__name"><span class='bold'>Native name: </span><span> {{
+                        country[0].name.official }}</span></p>
+                <p class="country-full__people"><span class="bold">Poulation: </span><span>
+                        {{ country[0].population }}</span></p>
+                <p class="country-full__region"><span class="bold">Region: </span><span> {{
+                        country[0].region }}</span></p>
+                <p class="country-full__subRegion"><span class="bold">Sub Region: </span><span>{{
+                        country[0].subregion }}</span></p>
+                <p class="country-full__capital"><span class="bold">Capital: </span><span> {{
+                        country[0].capital }}</span></p>
+            </div>
+            <div>
+                <p class="country-full__domain"><span class="bold">Domain: </span> <span> {{
+                        country[0].tld }}</span></p>
+                <p class="country-full__currencies"><span class="bold">Currencies: </span><span *ngFor="let item of country[0].currencies | keyvalue">
+                    {{item.key}}</span></p>
+                <p class="country-full__languages"><span class="bold">Languages:</span><span *ngFor="let item of country[0].languages | keyvalue">
+                    {{item.value}}
+                  </span></p>
+            </div>
+        </div>
+        <div class="borders_country">
+            <p class="country-full__borders"><span class="bold">Border countres: </span>
+                <!-- <ng-container *ngIf="ListaKrajow[0].borders[0]; else emptyList"> -->
+                <!-- <span *ngFor="let item of ListaKrajow[0].borders | keyvalue ";  >
+                {{ item.value }}
+              </span> -->
+              <span   >
+                {{ country[0].borders ?? 'Probably island' }}   
+              </span>
+            <!-- </ng-container> -->
+            <!-- <ng-template #emptyList>Probalbly island</ng-template> -->
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.country__head {
+    padding: 0 30px;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+.country__people {
+    padding: 0 30px;
+}
+
+.country__region {
+    padding: 0 30px;
+}
+
+.country__capital {
+    padding: 0 30px;
+}
+
+.country-full {
+    display: flex;
+    gap: 10rem;
+    margin-top: 10rem;
+    padding-left: 14rem;
+}
+
+.country-full img {
+    width: 55rem;
+    border: 1px solid lightgrey;
+}
+
+.right-wrapper {
+    line-height: 3.5rem;
+}
+
+.country-full__head {
+    padding: 3rem 0;
+}
+
+.flex_wrapper {
+    gap: 12rem;
+    display: flex;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+#region {
+    padding: 1rem 2rem;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 1.8rem;
+}

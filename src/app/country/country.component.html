@@ -1,0 +1,16 @@
+<div class="country-wrapper" >
+
+    <div  class="country" *ngFor="let country of countryList"  [routerLink]="['country-detail/', country.ccn3]">
+
+        <img class="flag" src="{{ country?.flags?.png}}" alt="some flag">
+        <h1 class="country__head">{{ country?.name?.common}}</h1>
+        <!-- <h1 class="country__head">{{ url }}</h1> -->
+        <!-- <a routerLink="['/details', kraje.name]" >detail</a> -->
+        <!-- <a>Learn More</a> -->
+        <p class="country__people"><span class="bold">Poulation: </span><span> {{ country?.population }}</span></p>
+        <p class="country__region"><span class="bold">Region: </span><span class="region">{{ country?.region}}</span>
+        </p>
+        <p class="country__capital"><span class="bold">Capital: </span><span>{{ country?.capital}}</span></p>
+    </div>
+
+</div>
