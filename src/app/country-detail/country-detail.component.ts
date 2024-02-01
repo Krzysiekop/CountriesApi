@@ -18,7 +18,11 @@ export class CountryDetailComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router) {
+      this.router.routeReuseStrategy.shouldReuseRoute = function () {
+        return false;
+     };
+     }
 
   countryId = this.route.snapshot.paramMap.get('id');
 
@@ -37,4 +41,6 @@ export class CountryDetailComponent {
   ngOnInit() {
     this.getCountryById()
   }
+
+
 }

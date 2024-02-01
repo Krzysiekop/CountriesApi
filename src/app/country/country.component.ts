@@ -28,4 +28,31 @@ export class CountryComponent {
     this.getAllCountries();
   }
 
+  selectedOption: string = '';
+
+  selectOnChange(newValue: string) {
+    this.selectedOption = newValue;
+    if (this.selectedOption === 'All') {
+      this.url = 'https://restcountries.com/v3.1/all';
+    }
+    else {
+      this.url = `https://restcountries.com/v3.1/region/${this.selectedOption}`;
+    }
+    this.getAllCountries();
+  }
+
+  serachContrybyName(text : string){
+    console.log(text);
+    if (text === '') {
+      this.url = 'https://restcountries.com/v3.1/all';
+    }
+    else {
+      this.url = `https://restcountries.com/v3.1/name/${text}`;
+    }
+    this.getAllCountries();
+
+
+  }
+
+
 }

@@ -18,24 +18,28 @@
             <div>
                 <p class="country-full__domain"><span class="bold">Domain: </span> <span> {{
                         country[0].tld }}</span></p>
-                <p class="country-full__currencies"><span class="bold">Currencies: </span><span *ngFor="let item of country[0].currencies | keyvalue">
-                    {{item.key}}</span></p>
-                <p class="country-full__languages"><span class="bold">Languages:</span><span *ngFor="let item of country[0].languages | keyvalue">
-                    {{item.value}}
-                  </span></p>
+                <p class="country-full__currencies"><span class="bold">Currencies: </span><span
+                        *ngFor="let item of country[0].currencies | keyvalue">
+                        {{item.key}}</span></p>
+                <p class="country-full__languages"><span class="bold">Languages:</span><span
+                        *ngFor="let item of country[0].languages | keyvalue">
+                        {{item.value}}
+                    </span></p>
             </div>
         </div>
         <div class="borders_country">
             <p class="country-full__borders"><span class="bold">Border countres: </span>
-                <!-- <ng-container *ngIf="ListaKrajow[0].borders[0]; else emptyList"> -->
-                <!-- <span *ngFor="let item of ListaKrajow[0].borders | keyvalue ";  >
-                {{ item.value }}
-              </span> -->
-              <span   >
+                <ng-container *ngIf="country[0].borders; else emptyList;"> 
+                <span  *ngFor="let item of country[0].borders | keyvalue " >
+                   <a [routerLink]="['/country-detail/', item.value]"> {{ item.value }}</a>
+                </span>
+
+                <!-- <span   >
                 {{ country[0].borders ?? 'Probably island' }}   
-              </span>
-            <!-- </ng-container> -->
-            <!-- <ng-template #emptyList>Probalbly island</ng-template> -->
+              </span> -->
+
+                </ng-container>
+                <ng-template #emptyList>Probalbly island</ng-template>
             </p>
         </div>
     </div>

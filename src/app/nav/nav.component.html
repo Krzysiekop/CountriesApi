@@ -1,21 +1,5 @@
 <nav>
-    <h1 class="nav__head">Where in world?</h1>
+    <h1 class="nav__head"><a [routerLink]="['']"> Where in world?</a></h1>
     <div class="dark_mode"> <img class="moon-icon" src="assets/icons/moon.svg" /> &nbsp; <span class="dark_mode-text"> Dark mode </span></div>
   </nav>
-  <div class="button_bar">
-    <button class="back"> Back</button>
-    <div class="find_country">
-      <input type="text" name="find" id="finder" placeholder="Search for a country..."/> 
-      <img src="assets/icons/lupe.svg" class="find_button" />
-    </div>
-    <select name="filter" id="filter">
-      <option value="All">Filter by region</option>
-      <option value="All">Whole World</option>
-      <option value="Europe">Europe</option>
-      <option value="Americas">Americas</option>
-      <option value="Asia">Asia</option>
-      <option value="Africa">Africa</option>
-      <option value="Antarctic">Antarctic</option>
-      <option value="Oceania">Oceania</option>
-    </select>
-  </div>
+  
