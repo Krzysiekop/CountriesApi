@@ -41,7 +41,7 @@ export class CountryComponent {
     this.getAllCountries();
   }
 
-  serachContrybyName(text : string){
+  serachContrybyName(text: string) {
     console.log(text);
     if (text === '') {
       this.url = 'https://restcountries.com/v3.1/all';
@@ -50,9 +50,5 @@ export class CountryComponent {
       this.url = `https://restcountries.com/v3.1/name/${text}`;
     }
     this.getAllCountries();
-
-
   }
-
-
 }
