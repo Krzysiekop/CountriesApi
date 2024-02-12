@@ -16,7 +16,25 @@
     padding: 0 30px;
 }
 
-.country-full {
+.back_button{
+    padding: 1.5rem 4rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    border: none;
+    margin-left: 7rem;
+}
+
+.back_button--icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+.country-details {
     display: flex;
     gap: 10rem;
     margin-top: 10rem;

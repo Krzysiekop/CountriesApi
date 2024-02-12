@@ -1,4 +1,5 @@
-<div class="country-full">
+<button class="back_button"  (click)="back()"> <img class="back_button--icon" src="assets/icons/back_icon.svg" alt="" srcset="">  Back </button>
+<div class="country-details">
     <img class="flag" src="{{ country[0].flags.png }}" alt="">
     <div class="right-wrapper">
         <h1 class="country-full__head"> {{ country[0].name.official }} </h1>
@@ -33,10 +34,6 @@
                 <span  *ngFor="let item of country[0].borders | keyvalue " >
                    <a [routerLink]="['/country-detail/', item.value]"> {{ item.value }}</a>
                 </span>
-
-                <!-- <span   >
-                {{ country[0].borders ?? 'Probably island' }}   
-              </span> -->
 
                 </ng-container>
                 <ng-template #emptyList>Probalbly island</ng-template>

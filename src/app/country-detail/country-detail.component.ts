@@ -42,5 +42,8 @@ export class CountryDetailComponent {
     this.getCountryById()
   }
 
+  back(){
+    history.back()
+  }
 
 }

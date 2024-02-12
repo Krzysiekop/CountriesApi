@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Country } from '../country';
 import { NgFor } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-country',
   standalone: true,
-  imports: [NgFor, RouterLink, RouterOutlet],
+  imports: [NgFor, RouterLink, RouterOutlet,ReactiveFormsModule],
   templateUrl: './country.component.html',
   styleUrl: './country.component.css'
 })
@@ -14,8 +15,14 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 export class CountryComponent {
 
   url = 'https://restcountries.com/v3.1/all';
+  searchForm!: FormGroup;
 
   countryList: Country[] = [];
+
+  constructor() {
+
+  }
+
 
   async getAllCountries(): Promise<Country> {
     const data = await fetch(this.url);
@@ -26,6 +33,9 @@ export class CountryComponent {
 
   ngOnInit() {
     this.getAllCountries();
+    this.searchForm = new FormGroup({
+      finder: new FormControl()
+    });
   }
 
   selectedOption: string = '';

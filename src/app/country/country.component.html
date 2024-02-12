@@ -1,8 +1,10 @@
 <div class="button_bar">
     <button class="back"> Back</button>
     <div class="find_country">
-      <input type="text" name="find" id="finder" #finder  placeholder="Search for a country..."/> 
-      <img src="assets/icons/lupe.svg" (click)="serachContrybyName(finder.value)" class="find_button" />
+      <form [formGroup]="searchForm" (ngSubmit)="serachContrybyName(finder.value)">
+      <input type="text" formControlName="finder" name="find" id="finder" #finder  placeholder="Search for a country..."/> 
+      <img src="assets/icons/lupe.svg"  class="find_button" />
+    </form>
     </div>
     <select name="filter" id="filter" #filter (change)="selectOnChange(filter.value)">
         <!-- <select name="filter" id="filter"> -->

@@ -100,6 +100,11 @@
     cursor: pointer;
 }
 
+form{
+    align-items: center;
+    display: flex;
+}
+
 .back {
     padding: 1.5rem 4.5rem;
     margin-left: 5rem;
